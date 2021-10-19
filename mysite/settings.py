@@ -135,6 +135,12 @@ REST_FRAMEWORK = {
     )
 
 }
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_HOST_USER = 'emailbarayetestkardan@gmail.com'
+# EMAIL_HOST_PASSWORD = 'Poulstar123'
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'emailbarayetestkardan@gmail.com'
 EMAIL_HOST_PASSWORD = 'Poulstar123'
