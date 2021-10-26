@@ -1,8 +1,8 @@
 from django.db import models
 
-# Create your models here.
-from django.db import models
-from django.contrib.auth.models import BaseUserManager, AbstractBaseUser   
+from django.contrib.auth.models import BaseUserManager, AbstractBaseUser 
+from rest_framework_simplejwt.tokens import RefreshToken
+
 # Create your models here.
 
 
@@ -62,3 +62,10 @@ class Account(AbstractBaseUser):
     # Does this user have permission to view this app? (ALWAYS YES FOR SIMPLICITY)
     def has_module_perms(self, app_label):
         return True
+
+    def tokens(self):
+        refresh = RefreshToken.for_user(self)
+        return {
+            'refresh': str(refresh),
+            'access': str(refresh.access_token)
+        }

@@ -1,0 +1,136 @@
+{% extends 'auth-base.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row flex-nowrap">
+        {% include 'right-navbar.html' %}
+        <div class="col-10 col-sm-10 col-md-10 col-lg-8 col-xl-8 bg-light text-end min-vh-100 p-3">
+            <h4>احراز هویت (کامل)</h4>
+            <hr>
+            <div style="text-align:justify;" class="alert alert-danger">به منظور معامله و استفاده از امکانات سامانه ، اطلاعات حساب کاربری شما باید
+                دقیقا مطابق کارت ملی تکمیل شود. دقت داشته باشید تکمیل اطلاعات حساب کاربری تنها از داخل کشور امکان پذیر
+                است . لطفا در صورت استفاده از فیلترشکن آن را غیرفعال کنید . از قرار دادن اطلاعات خود به اشخاص غیر به
+                بهانه کسب درآمد اکیدا خودداری کنید هرگونه پیشنهاد ساخت حساب کاربری برای اشخاص غیر که از طریق فضای مجازی
+                پیشنهاد می شود کلاهبرداری محسوب می شود و تمام عواقب حقوقی و قضایی آن بر عهده شخص شما خواهد بود.
+            </div>
+            <div class="card container-fluid rounded-3">
+                <h1 class="card-header bg-white" style="font-size: 18px;">اطلاعات شخصی</h1>
+                <br>
+                <div class="card-body">
+                    <div class="row" style="margin-bottom: 1%;">
+                        <div class="col-6 col-md-2">
+                            <p>نام</p>
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <input type="text" class="form-control" placeholder="مثال:علی" value="">
+                        </div>
+                        <div class="col-6 col-md-2">
+                            <p>نام خانوادگی</p>
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <input type="text" class="form-control" placeholder="مثال:حیدری" value="">
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 1%;">
+                        <div class="col-6 col-md-2">
+                            <p>کد ملی</p>
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <input type="text" class="form-control" placeholder="مثال:00123456789" value="">
+                        </div>
+                        <div class="col-6 col-md-2">
+                            <p>تاریخ تولد</p>
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <div class="input-group date" id="datepicker">
+                                <input type="text" class="form-control" placeholder=" مثال : ۱۳۶۰/۱۱/۲۰">
+                                <span class="input-group-append">
+                                        <span class="input-group-text bg-white d-block">
+                                            <i class="fa fa-calendar"></i>
+                                        </span>
+                                    </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 1%;">
+                        <div class="col-6 col-md-2">
+                            <p>شماره موبایل</p>
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <input type="text" class="form-control" placeholder="مثال:09121234512" value="">
+                        </div>
+                        <div class="col-6 col-md-2">
+                            <p>شماره ثابت</p>
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <input type="text" class="form-control" placeholder="مثال:02188888888" value="">
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 1%;">
+                        <div class="col-6 col-md-2">
+                            <p>آدرس منزل</p>
+                        </div>
+                        <div class="col-6 col-md-10">
+                            <textarea class="form-control"
+                                      placeholder="مثال:استان تهران - شهر تهران - خ آزادی - ک نصیری - پ 4"></textarea>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="card container-fluid rounded-3" style="text-align:justify;">
+                <h1 class="card-header bg-white" style="font-size: 18px;">تایید هویت</h1>
+                <br>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <p><i class="bi bi-exclamation-circle icon-red"></i> لطفا تصویر کارت ملی را در کنار چهره
+                                خودتان همراه با یک دست نوشته به صورت کاملا خوانا و واضح ، دقیقا مانند تصویر نمونه ،
+                                ارسال نمایید . دقت شود متن دست نوشته نبایستی تایپ شود. هم چنین توجه داشته باشید هنگام
+                                تهیه تصویر ، متن دست نوشته و اطلاعات کارت ملی به صورت برعکس و آینه ای ثبت نشود.</p>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <p style="color: red;"><i class="bi bi-exclamation-circle icon-red"></i> متن دست نوشته :
+                                اینجانب (نام نام خانوادگی) به کد ملی (کد ملی) ضمن مطالعه و تایید قوانین استفاده از خدمات
+                                جام جم، متعهد می گردم که حساب کاربری و مدارک خود را به منظور خرید و فروش بیت کوین و سایر
+                                ارزهای دیجیتال در اختیار سایر افراد قرار ندهم و به درخواست شخص ثالث از جمله افراد و گروه
+                                های شبکه های اجتماعی و غیره اقدام به ایجاد حساب کاربری و خرید و فروش نکنم. در صورت تخلف،
+                                مسئولیت آن را اعم از مالی، قضایی و حقوقی به صورت کامل بر عهده می گیرم.</p>
+                            <p style="color: red; line-height: 0;">جهت احراز هویت در سایت جام</p>
+                            <p style="color: red; line-height: 0.5;">نام و نام خانوادگی امضا و تاریخ</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md-5">
+                            <br><br>
+                            <p class="text-center">لطفا در هنگام ارسال عکس به نکات زیر توجه فرمایید.</p>
+                            <br>
+                            <div class="row">
+                                <div class="col-6"><p>نهایت حجم عکس 5MB</p></div>
+                                <div class="col-6"><p>فرمت های مناسب (JPEG,JPG)</p></div>
+                            </div>
+                            <br>
+                            <label for="formFile">انتخاب تصویر</label>
+                            <input class="form-control" type="file" id="formFile"
+                                   style="background-color: #013282; color: white;">
+                        </div>
+                        <div class="col-12 col-md-7">
+                            <img src="{% static '/logo/verify.jpg' %}" alt="" style="width:100%;">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="text-start m-2" >
+                <button type="button" class="btn"
+                        style="background-color: #013282; color: white;">ارسال
+                </button>
+            </div>
+
+
+        </div>
+        {% include 'left-part.html' %}
+    </div>
+</div>
+{% endblock %}

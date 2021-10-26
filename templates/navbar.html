@@ -1,0 +1,99 @@
+{% load static %}
+<header>
+    <nav class="navbar navbar-expand-md navbar-light bg-light" aria-label="Third navbar example" dir="ltr">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/" style="margin-left: 10%; margin-right: 5%;"><img src="{% static '/logo/btc.svg' %}"
+                                                                                              width="50px" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbars"
+                    aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbars" style="margin-left: 10%;">
+                <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact" style="color: black">تماس با ما</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about" style="color: black">درباره ما</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="color: black">بلاگ</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/policies" style="color: black">قوانین</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/pricing" style="color: black">کارمزد</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/how" style="color: black">راهنمای استفاده</a>
+                    </li>
+
+                    <li class="nav-item dropdown" dir="rtl">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-bs-toggle="dropdown"
+                           aria-expanded="false" style="color: black"> بازارها </a>
+                        <ul class="dropdown-menu dropdown-menu-end bg-light" aria-labelledby="dropdown05" dir="rtl"
+                            style="max-height: 210px; overflow-y: auto;">
+                            <li style="text-align: right;"><a class="dropdown-item" href="/btc-tmn" style="color: black"><span> <img
+                                    src="{% static '/logo/btc.svg' %}" style="width: 20px;;"> </span>بیت کوین</a></li>
+                            <li style="text-align: right;"><a class="dropdown-item" href="#" style="color: black"><span> <img
+                                    src="{% static '/logo/eth.svg' %}" style="width: 20px;;"> </span>اتریوم</a></li>
+                            <li style="text-align: right;"><a class="dropdown-item" href="#" style="color: black"><span> <img
+                                    src="{% static '/logo/ada.svg' %}" style="width: 20px;;"> </span>کاردانو</a></li>
+                            <li style="text-align: right;"><a class="dropdown-item" href="#" style="color: black"><span> <img
+                                    src="{% static '/logo/bnb.svg' %}" style="width: 20px;;"> </span>بایننس کوین</a></li>
+                            <li style="text-align: right;"><a class="dropdown-item" href="#" style="color: black"><span> <img
+                                    src="{% static '/logo/doge.svg' %}" style="width: 20px;;"> </span>دوج کوین</a></li>
+                            <li style="text-align: right;"><a class="dropdown-item" href="#" style="color: black"><span> <img
+                                    src="{% static '/logo/usdt.svg' %}" style="width: 20px;;"> </span>تتر</a></li>
+                            <li style="text-align: right;"><a class="dropdown-item" href="#" style="color: black"><span> <img
+                                    src="{% static '/logo/atom.svg' %}" style="width: 20px;;"> </span>اتم</a></li>
+                            <li style="text-align: right;"><a class="dropdown-item" href="#" style="color: black"><span> <img
+                                    src="{% static '/logo/xrp.svg' %}" style="width: 20px;;"> </span>ریپل</a></li>
+                            <li style="text-align: right;"><a class="dropdown-item" href="#" style="color: black"><span> <img
+                                    src="{% static '/logo/ltc.svg' %}" style="width: 20px;;"> </span>لایت کوین</a></li>
+                            <li style="text-align: right;"><a class="dropdown-item" href="#" style="color: black"><span> <img
+                                    src="{% static '/logo/trx.svg' %}" style="width: 20px;;"> </span>ترون</a></li>
+                            <li style="text-align: right;"><a class="dropdown-item" href="#" style="color: black"><span> <img
+                                    src="{% static '/logo/dash.svg' %}" style="width: 20px;;"> </span>دش</a></li>
+                            <li style="text-align: right;"><a class="dropdown-item" href="#" style="color: black"><span> <img
+                                    src="{% static '/logo/bch.svg' %}" style="width: 20px;;"> </span>بیت کوین کش</a></li>
+                            <li style="text-align: right;"><a class="dropdown-item" href="#" style="color: black"><span> <img
+                                    src="{% static '/logo/xlm.svg' %}" style="width: 20px;;"> </span>استلار</a></li>
+                            <li style="text-align: right;"><a class="dropdown-item" href="#" style="color: black"><span> <img
+                                    src="{% static '/logo/eos.svg' %}" style="width: 20px;;"> </span>ایاس</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/" style="color: black">صرافی جام جم</a>
+                    </li>
+
+
+                </ul>
+
+                <ul class="navbar-nav ml-auto" style="margin-right: 50px;">
+
+                    <li class="nav-item" style="margin-right: 5px;">
+                        <a class="btn" href="/login" role="button" style="color: #0257d8;">
+                            ورود <i class="fs-4 bi-person icon"></i> </a>
+                    </li>
+
+                    <li class="nav-item" style="margin-top: 10px;;">
+                        <a class="btn btn-primary" href="/register" role="button">عضویت</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>

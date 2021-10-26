@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+{% load rest_framework %}
+{% load staticfiles %}
+
+<div class="container-fluid bg-gray">
+    <div class="row flex-nowrap">
+
+        <div class="col" style="height: auto; margin-top: 5%; margin-right: 2.5%; margin-bottom: 5%;">
+            <div class="row" style="margin-right: 2%; margin-left: 2%;">
+
+                <div class="row d-flex justify-content-center">
+                    <h2 class="text-center">جام جم</h2>
+                </div>
+
+                <div class="col-sm-4 d-flex justify-content-center container-fluid rounded">
+                    <div class="card container-fluid rounded">
+                        <h1 style="font-size: 18px; text-align: center; line-height: 3;" class="card-header bg-white">
+                            ورود به حساب
+                            کاربری</h1>
+                        <br>
+                        <div class="card-body">
+                            <div class="alert alert-danger">
+                                از قرار دادن اطلاعات خود به اشخاص غیر به بهانه کسب درآمد اکیدا خودداری کنید هرگونه
+                                پیشنهاد ساخت حساب کاربری برای اشخاص غیر که از طریق فضای مجازی پیشنهاد می شود کلاهبرداری
+                                محسوب می شود و تمام عواقب حقوقی و قضایی آن بر عهده شخص شما خواهد بود
+                            </div>
+                            {% if error %}
+                            <p style="color:red">{{error}}</p>
+                            {% endif %}
+                        </div>
+
+                        {% if not request.user.is_authenticated %}
+                        {% if messages %}
+                        <ul>
+                            {% for message in messages %}
+                            <li>{{ message }}</li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                        <form action="{% url 'login' %}" method="post">{% csrf_token %}
+                            {% render_form serializer %}
+                            <div class="form-check d-flex mb-3">
+                                <input class="form-check-input m-2" type="checkbox" id="FieldsetCheck" checked>
+                                <label class="form-check-label" for="FieldsetCheck">
+                                    <a href="#">قوانین و شرایط جام جم</a> را خوانده و می پذیرم
+                                </label>
+                            </div>
+                            <div class="d-grid gap-2 my-4">
+                                <button class="btn btn-primary" type="submit">ثبت نام</button>
+                            </div>
+                        </form>
+
+
+                        <div class="row d-flex justify-content-center mb-4">
+                            <div class="col-8">
+                                <p style="font-size: medium;">قبلا در جام جم ثبت نام کرده اید؟ </p>
+                            </div>
+                            <div class="col-4 text-end">
+                                <a href="account/login" style="text-decoration:underline; font-size: medium;">وارد شوید</a>
+                            </div>
+                        </div>
+
+                        {% else %}
+                        <p style="margin: 50px 0px;">شما به حساب خود لاگین کرده اید. در صورت تمایل به خروج روی لینک <a
+                                href="/logout/">خروج</a>
+                            کلیک کنید.</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% endblock %}

@@ -1,0 +1,102 @@
+{% extends 'auth-base.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row flex-nowrap">
+        {% include 'right-navbar.html' %}
+        <div class="col-10 col-sm-10 col-md-10 col-lg-7 col-xl-7 bg-light text-end min-vh-100">
+            <div class="row m-3" style="text-align: justify;">
+                <div class="col-12 col-md-4">
+                    <h4>
+                        احراز هویت
+                    </h4>
+                    <p>
+                        شما برای دسترسی به قابلیتهای سایت نیاز به احراز هویت دارید.
+                    </p>
+
+                </div>
+                <div class="col-12 col-md-4">
+                    <h4>
+                        فوری
+                    </h4>
+                    <p>
+                        در کمتر از دو دقیقه معامله کن
+                    </p>
+                </div>
+                <div class="col-12 col-md-4">
+                    <h4>
+                        کامل
+                    </h4>
+                    <p>
+                        دریافت اطلاعات هویتی شما به همراه اطلاعات تماس و عکس
+                    </p>
+                </div>
+            </div>
+
+            <div class="row m-3" style="text-align: justify;">
+                <div class="d-none d-sm-none d-md-block col-md-4">
+                    <hr>
+                    <p>بازارها</p>
+                    <hr>
+                    <p> معامله در تمام بازارها</p>
+                    <hr>
+                    <p> واریز رمزارز</p>
+                    <hr>
+                    <p>برداشت رمز ارز</p>
+                    <hr>
+                    <p> واریز ریالی</p>
+                    <hr>
+                    <p>برداشت ریالی</p>
+                    <hr>
+                </div>
+                <div class="d-none d-sm-none d-md-block col-md-4 text-center">
+                    <hr>
+                    <p><img src="{% static '/logo/green_checkmark.svg' %}" width="18px;"></p>
+                    <hr>
+                    <p><img src="{% static '/logo/green_checkmark.svg' %}" width="18px;"></p>
+                    <hr>
+                    <p><img src="{% static '/logo/green_checkmark.svg' %}" width="18px;"></p>
+                    <hr>
+                    <p><img src="{% static '/logo/red_prohibit.svg' %}" width="18px;"></p>
+                    <hr>
+                    <p>تا سقف دو میلیون تومان روزانه</p>
+                    <hr>
+                    <p><img src="{% static '/logo/red_prohibit.svg' %}" width="18px;"></p>
+                    <hr>
+                </div>
+                <div class="d-none d-sm-none d-md-block col-md-4 text-center">
+                    <hr>
+                    <p><img src="{% static '/logo/green_checkmark.svg' %}" width="18px;"></p>
+                    <hr>
+                    <p><img src="{% static '/logo/green_checkmark.svg' %}" width="18px;"></p>
+                    <hr>
+                    <p><img src="{% static '/logo/green_checkmark.svg' %}" width="18px;"></p>
+                    <hr>
+                    <p><img src="{% static '/logo/green_checkmark.svg' %}" width="18px;"></p>
+                    <hr>
+                    <p><img src="{% static '/logo/green_checkmark.svg' %}" width="18px;"></p>
+                    <hr>
+                    <p><img src="{% static '/logo/green_checkmark.svg' %}" width="18px;"></p>
+                    <hr>
+                </div>
+            </div>
+
+            <div class="row m-3" style="text-align: justify;">
+                <div class="col-12 col-md-4">
+                    <p>
+                        سطح کاربری خود را انتخاب کنید
+                    </p>
+                </div>
+                <div class="col-12 col-md-4 text-center">
+                    <button type="button" class="btn btn-warning">سطح پایه</button>
+                </div>
+                <div class="col-12 col-md-4 text-center">
+                    <button type="button" class="btn btn-warning">سطح نامحدود</button>
+                </div>
+            </div>
+
+        </div>
+        {% include 'left-part.html' %}
+    </div>
+</div>
+{% endblock %}

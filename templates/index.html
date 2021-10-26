@@ -1,0 +1,296 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row flex-nowrap">
+
+      <div class="col" style="height: auto; margin-top: 5%; margin-right: 2.5%; margin-bottom: 20%;">
+        <div class="row" style="margin-right: 2%; margin-left: 2%;">
+
+          <div class="col-lg-6">
+            <div style="margin-top: 15%;">
+              <h1 style="color: #0257d8; font-size: 55px;">جام جم</h1>
+              <h2 style="margin-top: 25px;">بازار معاملاتی ارزهای دیجیتال</h2>
+              <h6 style="margin-top: 25px;">خرید و فروش بیت کوین و سایر ارزهای دیجیتال را در محیطی امن و حرفه ای تجربه کنید</h6>
+            </div>
+          </div>
+
+          <div class="col-lg-6" style="margin-left: 0%; min-width: 50%;;">
+            <div style="height: 500px; margin-top: 5%;;">
+              <div style="background-color: #0257d8; margin-left: 10%; margin-right: 10%; height: auto; border-radius: 10px;;">
+
+                <div class="row gy-2 gx-3 align-items-center" style="margin-left: 5%; margin-right: 5%;">
+
+                  <div class="col-md-6" style="margin-top: 5%;">
+                    <div class="input-group">
+                      <input type="text" style="background-color: white;" class="form-control" id="autoSizingInputGroup" placeholder="مقدار را وارد کنید">
+                    </div>
+                  </div>
+
+                  <div class="col-md-6" style="margin-top: 5%;">
+                    <select id="inputState" class="form-control">
+                      <option selected>تتر</option>
+                      <option selected>بیت کوین</option>
+                      <option selected>تومان</option>
+                    </select>
+                  </div>
+                  <label style="color: white;">پرداخت میکنم</label>
+                </div>
+
+                <div class="text-center" style="margin-top: 5%; margin-bottom: 8%;">
+                  <a href="#"><img src="{% static '/logo/arrow.svg' %}"  style="width: 40px; background-color: #ffc107;"></a>
+                </div>
+
+                <div class="row gy-2 gx-3 align-items-center" style="margin-left: 5%; margin-right: 5%;">
+
+                  <div class="col-md-6">
+                    <div class="input-group">
+                      <input type="text" style="background-color: white;" class="form-control" id="autoSizingInputGroup2" placeholder="مقدار را وارد کنید">
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <select id="inputState2" class="form-control">
+                      <option selected>اتریوم</option>
+                      <option selected>کاردانو</option>
+                      <option selected>بایننس کوین</option>
+                      <option selected>دوج کوین</option>
+                      <option selected>تتر</option>
+                      <option selected>اتم</option>
+                      <option selected>ریبل</option>
+                      <option selected>لایت کوین</option>
+                      <option selected>ترون</option>
+                      <option selected>دش</option>
+                      <option selected>بیت کوین کش</option>
+                      <option selected>استلار</option>
+                      <option selected>ایاس</option>
+                      <option selected>بیت کوین</option>
+                    </select>
+                  </div>
+                  <label style="color: white;">دریافت میکنم</label>
+                </div>
+                <hr style="color: white; margin-top: 5%;">
+
+                <h5 style="text-align: center; color: white; font-size: 17px; margin-left: 5%; margin-right: 5%;" dir="ltr">1 BTC = 1,524,999,999 TMN</h5>
+
+                <div class="text-center" style="margin-top: 4%;">
+                  <a class="btn btn-warning" href="#" role="button"> شروع معامله </a>
+                </div>
+                <div style="height: 25px;">
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top: 2%;;">
+            <span><a style="margin-left: 2%;">نمایش بازار بر اساس</a></span>
+            <span><a href="#" style="text-decoration: none; color: #0257d8; margin-left: 2%;;">تومان (TMN)</a></span>
+            <span><a class="table-section" href="#" style="text-decoration: none; margin-left: 2%;">تتر (USDT)</a></span>
+            <span><a class="table-section" href="#" style="text-decoration: none;">بیت کوین (BTC)</a></span>
+          </div>
+
+          <div class="table-responsive" style="margin-left: 2%; margin-right: 0%; margin-top: 1%;">
+            <table class="table table-hover bg-light" style="margin-bottom: 0%;">
+              <thead>
+                <tr>
+                  <th scope="col">نوع ارز</th>
+                  <th scope="col">آخرین قیمت</th>
+                  <th scope="col">تغییرات</th>
+                  <th scope="col">بیشترین قیمت(24h)</th>
+                  <th scope="col">کمترین قیمت(24h)</th>
+                  <th scope="col">معامله</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row"><span><img src="{% static '/logo/btc.svg' %}" style="width: 20px; margin-right: 2%; margin-top: -1.5%;"></span>  بیت کوین  </th>
+                  <td>1,526,100,000</td>
+                  <td style="color: red;">2.62-</td>
+                  <td>1,579,800,000</td>
+                  <td>1,480,011,111</td>
+                  <td><a class="btn btn-outline-primary" href="#" role="button">معامله</a></td>
+                </tr>
+                <tr>
+                  <th scope="row"><span><img src="{% static '/logo/eth.svg' %}" style="width: 20px; margin-right: 2%; margin-top: -1.5%;"></span>  اتریوم  </th>
+                  <td>95,356,336</td>
+                  <td style="color: red;">0.79-</td>
+                  <td>97,218,103</td>
+                  <td>93,185,491</td>
+                  <td><a class="btn btn-outline-primary" href="#" role="button">معامله</a></td>
+                </tr>
+                <tr>
+                  <th scope="row"><span><img src="{% static '/logo/ada.svg' %}" style="width: 20px; margin-right: 2%; margin-top: -1.5%;"></span>  کاردانو </th>
+                  <td>57,502</td>
+                  <td style="color: red;">1.48-</td>
+                  <td>59,220</td>
+                  <td>56,705</td>
+                  <td><a class="btn btn-outline-primary" href="#" role="button">معامله</a></td>
+                </tr>
+                <tr>
+                  <th scope="row"><span><img src="{% static '/logo/bnb.svg' %}" style="width: 20px; margin-right: 2%; margin-top: -1.5%;"></span>  بایننس کوین </th>
+                  <td>12,130,000</td>
+                  <td style="color: green;">8.59</td>
+                  <td>12,200,000</td>
+                  <td>10,679,557</td>
+                  <td><a class="btn btn-outline-primary" href="#" role="button">معامله</a></td>
+                </tr>
+                <tr>
+                  <th scope="row"><span><img src="{% static '/logo/atom.svg' %}" style="width: 20px; margin-right: 2%; margin-top: -1.5%;"></span>  اتم </th>
+                  <td>910,894</td>
+                  <td style="color: green;">7.32</td>
+                  <td>945,376</td>
+                  <td>823,795</td>
+                  <td><a class="btn btn-outline-primary" href="#" role="button">معامله</a></td>
+                </tr>
+                <tr>
+                  <th scope="row"><span><img src="{% static '/logo/doge.svg' %}" style="width: 20px; margin-right: 2%; margin-top: -1.5%;"></span>  دوج کوین  </th>
+                  <td>6,126</td>
+                  <td style="color: green;">1.69</td>
+                  <td>6,351</td>
+                  <td>5,927</td>
+                  <td><a class="btn btn-outline-primary" href="#" role="button">معامله</a></td>
+                </tr>
+                <tr>
+                  <th scope="row"><span><img src="{% static '/logo/usdt.svg' %}" style="width: 20px; margin-right: 2%; margin-top: -1.5%;"></span>  تتر </th>
+                  <td>27,372</td>
+                  <td style="color: red;">1.26-</td>
+                  <td>27,775</td>
+                  <td>27,100</td>
+                  <td><a class="btn btn-outline-primary" href="#" role="button">معامله</a></td>
+                </tr>
+                <tr>
+                  <th scope="row"><span><img src="{% static '/logo/xrp.svg' %}" style="width: 20px; margin-right: 2%; margin-top: -1.5%;"></span>  ریپل  </th>
+                  <td>29,948</td>
+                  <td style="color: red;">2.29-</td>
+                  <td>31,164</td>
+                  <td>29,049</td>
+                  <td><a class="btn btn-outline-primary" href="#" role="button">معامله</a></td>
+                </tr>
+                <tr>
+                  <th scope="row"><span><img src="{% static '/logo/ltc.svg' %}" style="width: 20px; margin-right: 2%; margin-top: -1.5%;"></span>  لایت کوین </th>
+                  <td>4,690,001</td>
+                  <td style="color: red;">3.01-</td>
+                  <td>4,845,000</td>
+                  <td>4,580,000</td>
+                  <td><a class="btn btn-outline-primary" href="#" role="button">معامله</a></td>
+                </tr>
+                <tr>
+                  <th scope="row"><span><img src="{% static '/logo/trx.svg' %}" style="width: 20px; margin-right: 2%; margin-top: -1.5%;"></span>  ترون  </th>
+                  <td>2,590</td>
+                  <td style="color: red;">0.87-</td>
+                  <td>2,655</td>
+                  <td>2,500</td>
+                  <td><a class="btn btn-outline-primary" href="#" role="button">معامله</a></td>
+                </tr>
+                <tr>
+                  <th scope="row"><span><img src="{% static '/logo/dash.svg' %}" style="width: 20px; margin-right: 2%; margin-top: -1.5%;"></span>  دش  </th>
+                  <td>4,893,701</td>
+                  <td style="color: green;">0.52</td>
+                  <td>4,955,178</td>
+                  <td>4,639,696</td>
+                  <td><a class="btn btn-outline-primary" href="#" role="button">معامله</a></td>
+                </tr>
+                <tr>
+                  <th scope="row"><span><img src="{% static '/logo/bch.svg' %}" style="width: 20px; margin-right: 2%; margin-top: -1.5%;"></span>  بیت کوین کش </th>
+                  <td>15,857,795</td>
+                  <td style="color: red;">1.4-</td>
+                  <td>16,466,464</td>
+                  <td>15,550,000</td>
+                  <td><a class="btn btn-outline-primary" href="#" role="button">معامله</a></td>
+                </tr>
+                <tr>
+                  <th scope="row"><span><img src="{% static '/logo/xlm.svg' %}" style="width: 20px; margin-right: 2%; margin-top: -1.5%;"></span>  استلار  </th>
+                  <td>9,080</td>
+                  <td style="color: red;">1.32-</td>
+                  <td>10,300</td>
+                  <td>8,741</td>
+                  <td><a class="btn btn-outline-primary" href="#" role="button">معامله</a></td>
+                </tr>
+                <tr>
+                  <th scope="row"><span><img src="{% static '/logo/eos.svg' %}" style="width: 20px; margin-right: 2%; margin-top: -1.5%;"></span>  ایاس  </th>
+                  <td>122,000</td>
+                  <td style="color: green;">0.41</td>
+                  <td>125,248</td>
+                  <td>116,767</td>
+                  <td><a class="btn btn-outline-primary" href="#" role="button">معامله</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div style="text-align: center; margin-top: 5%;">
+            <h2 style="color: #0257d8;">امکانات و ویژگی ها</h2>
+            <p style="margin-top: 1%;;">امکانات پیشرفته و ویژگی های منحصربفرد باعث ایجاد تجربه ای متفاوت در خرید و فروش بیت کوین و سایر ارزهای دیجیتال شده است</p>
+          </div>
+
+          <div class="row" style="margin-top: 4%; text-align: justify;">
+
+            <div class="col-sm-12 col-md-3">
+              <h6 style="color: #0257d8; font-size: 18px;"><span><img src="{% static '/logo/btc.svg' %}"></span> ذخیره امن دارایی ها </h6>
+              <p> امکانات پیشرفته صرافی جام جم و ویژگی های منحصر بفرد آن باعث ایجاد امنیت و سهولت در خرید و فروش بیت کوین و سایر ارزهای دیجیتال شده است.</p>
+            </div>
+
+            <div class="col-sm-12 col-md-3">
+              <h6 style="color: #0257d8; font-size: 18px;"><span><img src="{% static '/logo/btc.svg' %}"></span> ابزار تحلیل و چارت قیمتی </h6>
+              <p>جام جم این امکان را برای افراد حرفه ای ایجاد کرده است که برای خرید و فروش بیت کوین و سایر ارزهای دیجیتال بتوانند از نمودارهای آنلاین شمعی و خطی برای تحلیل و آنالیز بازار استفاده کنند.</p>
+            </div>
+
+            <div class="col-sm-12 col-md-3">
+              <h6 style="color: #0257d8; font-size: 18px;"><span><img src="{% static '/logo/btc.svg' %}"></span> پشتیبانی سریع </h6>
+              <p>یکی از شاخص های یک بازار معاملات امن و قابل اعتماد برای خرید و فروش بیت کوین و سایر ارزهای دیجیتال داشتن پشتیبانی همیشگی و سریع است که ما در جام جم سعی در ارایه به بهترین شکل آن هستیم.</p>
+            </div>
+
+            <div class="col-sm-12 col-md-3">
+              <h6 style="color: #0257d8; font-size: 18px;"><span><img src="{% static '/logo/btc.svg' %}"></span> تنوع کوین </h6>
+              <p>جام جم در ابتدای راه به پوشش ارزهای های شاخص و پرتراکنش مانند بیت کوین، اتریوم، تتر و ... پرداخته است. جام جم این توانایی را دارد که در آینده، ارزهای بیشتری را در بازار معاملات خود پشتیبانی کند.</p>
+            </div>
+
+          </div>
+
+          <div style="text-align: center; margin-top: 4%;">
+            <a class="btn btn-primary" href="#" role="button"> همین الان شروع کنید > </a>
+          </div>
+
+          <div class="row" style="background-image: linear-gradient(to right, #65b3e0, white); border-radius: 10px; margin-top: 5%;">
+
+            <div class="col-lg-7" style="text-align: right;">
+              <img src="{% static '/logo/wallex-stats-bg.png' %}" style="width: 220px;">
+            </div>
+
+            <div class="col-lg-5">
+              <div class="row" style="margin-top: 10%; width: 100%;">
+                <div class="col" style="margin-right: 10%;">
+                  <p style="font-size: 35px; color: #0257d8;">492,608</p>
+                  <p style="font-size: 30px;">تعداد کاربران</p>
+                </div>
+                <div class="col">
+                  <p style="font-size: 35px; color: #0257d8;">6,386,222</p>
+                  <p style="font-size: 30px;">تعداد کل معاملات</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row" style="margin-top: 4%; margin-bottom: -10%;;">
+
+            <div class="col-lg-8" style="margin-top: 5%;">
+              <h4 style="color: #0257d8;">  اپلیکیشن جام جم  </h4>
+              <p>خرید و فروش بیت کوین و سایر ارزهای دیجیتال را به راحتی در گوشی خود داشته باشید.همیشه و همه جا معامله کنید.</p>
+              <p style="font-size: 25px;">به زودی ...</p>
+            </div>
+
+            <div class="col-lg-4">
+              <img src="{% static '/logo/application.png' %}" style="width: 220px;">
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  {% endblock %}

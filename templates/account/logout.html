@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<div class="container-fluid">
+    <div class="row flex-nowrap">
+
+        <div class="col" style="height: auto; margin-top: 5%; margin-right: 2.5%; margin-bottom: 5%;">
+            <div class="row" style="margin-right: 2%; margin-left: 2%;">
+
+                <div class="row d-flex justify-content-center">
+                    <h2 class="text-center">جام جم</h2>
+                </div>
+
+                <div class="col-sm-4 d-flex justify-content-center container-fluid">
+                    <div class="card container-fluid rounded">
+                        <h1 style="font-size: 18px; text-align: center; line-height: 3;" class="card-header bg-white">
+                            ورود به حساب
+                            کاربری</h1>
+                        <br>
+                        <div class="card-body">
+                            <div class="alert alert-danger">
+                                از صحت دامنه jamejam.com اطمینان حاصل نمایید!
+                            </div>
+                            {% if error %}
+                            <p style="color:red">{{error}}</p>
+                            {% endif %}
+                        </div>
+
+                        {% if request.user.is_authenticated %}
+
+                        <form method="POST">{% csrf_token %}
+                            <P>آیا از خروج از حساب خود اطمینان دارید؟</P>
+
+                            <div class="d-grid gap-2 my-4">
+                                <button class="btn btn-primary" type="submit">خروج</button>
+                            </div>
+                        </form>
+
+
+                        {% else %}
+                        <p style="margin: 50px 0px;">اگر می خواهید وارد حساب خود شوید روی لینک <a href="/login/">ورود</a> کلیک کنید.</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

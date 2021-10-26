@@ -1,0 +1,43 @@
+{% extends 'auth-base.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row flex-nowrap">
+        {% include 'right-navbar.html' %}
+        <div class="col-10 col-sm-10 col-md-10 col-lg-8 col-xl-8 bg-light text-end min-vh-100 p-3">
+            <h4>احراز هویت (فوری)</h4>
+            <hr>
+            <div class="card container-fluid rounded-3">
+                <h1 class="card-header bg-white" style="font-size: 18px;">تایید اطلاعات تماس</h1>
+                <br>
+                <div class="card-body">
+                    <h1 style="font-size: 18px;">شماره موبایل</h1>
+                    <p>لطفا کد ارسالی به شماره موبایل 09128888888 را وارد کنید.</p>
+                    <br>
+                    <div class="row">
+                        <div class="col-12 col-sm-2">
+                            <p>کد تایید</p>
+                        </div>
+                        <div class="col-12 col-sm-5">
+                            <input type="text" class="form-control" placeholder="کد تایید ارسالی را وارد کنید."
+                                   value="">
+                        </div>
+                        <div class="col-12 col-sm-5">
+                            <button type="button" class="btn bg-light" style="color: black;">ارسال مجدد کد تایید
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-start row">
+                <div class="col-md-12 float-end">
+                    <button type="button" class="m-2 btn bg-white" style="color: black;">تغییر شماره موبایل</button>
+                    <button type="button" class="m-2 btn" style="background-color: #013282; color: white;">تایید و ادامه
+                    </button>
+                </div>
+            </div>
+        </div>
+        {% include 'left-part.html' %}
+    </div>
+</div>
+{% endblock %}

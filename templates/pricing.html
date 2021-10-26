@@ -1,0 +1,184 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid bg-gray">
+    <div class="row ">
+        <h4 class="text-gray text-center" style="line-height: 5;">کارمزد و هزینه های خدمات</h4>
+    </div>
+
+    <div class="col-8 container-fluid bg-white rounded my-4 p-4" style="text-align: justify;">
+        <br>
+        <p>کارمزد معاملات جام جم به صورت درصد از مبلغ کل معامله است و محاسبه آن بر اساس ملاحظات زیر صورت می گیرد.</p>
+        <br>
+        <p>• کارمزد خریدار ارزدیجیتال به صورت ارزدیجیتال کسر و کارمزد فروشنده ارزدیجیتال از مبلغ دریافتی به تومان کسر می
+            شود.</p>
+        <p>• کارمزد از هر دو سمت معامله کسر می شود.</p>
+        <p>• در هنگام ثبت معاملات در جام جم، کارمزد به شما نمایش داده می شود.</p>
+        <br>
+        <hr>
+        <br>
+        <h6>کارمزد معاملات</h6>
+        <br>
+        <p>با توجه به حجم معاملات سه ماه اخیر کاربر، کارمزد معاملات طبق جدول زیر به صورت پلکانی محاسبه می گردد:</p>
+        <br>
+        <div class="row d-flex justify-content-center">
+
+            <div class="col-6 d-flex justify-content-center">
+                <table class="table table-bordered text-center">
+                    <thead>
+                    <tr>
+                        <th scope="col">مقدار حجم معامله در سه ماه اخیر</th>
+                        <th scope="col">کارمزد معامله</th>
+                        <th scope="col">سطح کاربری</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>کمتر از ۲۰ میلیون تومان</td>
+                        <td>۰.۴%</td>
+                        <td>سطح برنزی</td>
+                    </tr>
+                    <tr>
+                        <td>بین ۲۰ تا ۵۰ میلیون تومان</td>
+                        <td>۰.۳۵%</td>
+                        <td>سطح نقره ای</td>
+                    </tr>
+                    <tr>
+                        <td>بین ۵۰ تا ۱۰۰ میلیون تومان</td>
+                        <td>۰.۳%</td>
+                        <td>سطح طلایی</td>
+                    </tr>
+                    <tr>
+                        <td>بین ۱۰۰ تا ۲۰۰ میلیون تومان</td>
+                        <td>۰.۲۵%</td>
+                        <td>سطح پلاتینیوم</td>
+                    </tr>
+                    <tr>
+                        <td>بیشتر از ۲۰۰ میلیون تومان</td>
+                        <td>۰.۲%</td>
+                        <td>سطح اورانیوم</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <br>
+            </div>
+        </div>
+        <p>لازم به ذکر است کارمزد معاملات جفت ارز (به طور مثال بیت کوین - تتر) به صورت ثابت ۰.۲% در نظر گرفته می شود
+            .</p>
+        <br>
+        <hr>
+        <br>
+        <h6>کارمزد برداشت ارز دیجیتال</h6>
+        <br>
+        <p>کارمزد برداشت دارایی‌های دیجیتال به نوع ارز بستگی دارد. این هزینه در واقع به دلیل کارمزدهای تراکنش شبکه کسر
+            می‌شود و جام جم در آن نقشی ندارد. در حال حاضر این هزینه‌ها به شرح زیر است:</p>
+        <br>
+        <div class="row d-flex justify-content-center">
+            <div class="col-6 d-flex justify-content-center">
+                <table class="table table-bordered text-center">
+                    <thead>
+                    <tr>
+                        <th scope="col">نوع ارز</th>
+                        <th scope="col">کارمزد برداشت</th>
+                        <th scope="col">حداقل میزان برداشت</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>بیت کوین</td>
+                        <td>0.0005 BTC</td>
+                        <td>0.001 BTC</td>
+                    </tr>
+                    <tr>
+                        <td>اتریوم</td>
+                        <td>0.005 ETH</td>
+                        <td>0.01 ETH</td>
+                    </tr>
+                    <tr>
+                        <td>کاردانو</td>
+                        <td>0.1 ADA</td>
+                        <td>0.2 ADA</td>
+                    </tr>
+                    <tr>
+                        <td>بایننس کوین</td>
+                        <td>0.0005 BNB</td>
+                        <td>0.01 BNB</td>
+                    </tr>
+                    <tr>
+                        <td>دوج کوین</td>
+                        <td>5 DOGE</td>
+                        <td>25 DOGE</td>
+                    </tr>
+                    <tr>
+                        <td>تتر</td>
+                        <td>
+                            <p style="line-height: 1;">ERC20 : 30 USDT</p>
+                            <p style="line-height: 1;">TRC20 : 1 USDT</p>
+                        </td>
+                        <td>
+                            <p style="line-height: 1;">ERC20 :150 USDT</p>
+                            <p style="line-height: 1;">TRC20 :10 USDT</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>اتم</td>
+                        <td>0.01 ATOM</td>
+                        <td>0.02 ATOM</td>
+                    </tr>
+                    <tr>
+                        <td>ماتیک</td>
+                        <td>0.2 MATIC</td>
+                        <td>0.4 MATIC</td>
+                    </tr>
+                    <tr>
+                        <td>ریپل</td>
+                        <td>0.25 XRP</td>
+                        <td>20.5 XRP</td>
+                    </tr>
+                    <tr>
+                        <td>لایت کوین</td>
+                        <td>0.001 LTC</td>
+                        <td>0.002 LTC</td>
+                    </tr>
+                    <tr>
+                        <td>ترون</td>
+                        <td>1 TRX</td>
+                        <td>2 TRX</td>
+                    </tr>
+                    <tr>
+                        <td>دش</td>
+                        <td>0.002 DASH</td>
+                        <td>0.004 DASH</td>
+                    </tr>
+                    <tr>
+                        <td>بیت کوین کش</td>
+                        <td>0.0001 BCH</td>
+                        <td>0.0002 BCH</td>
+                    </tr>
+                    <tr>
+                        <td>استلار</td>
+                        <td>0.01 XLM</td>
+                        <td>1.1 XLM</td>
+                    </tr>
+                    <tr>
+                        <td>ایاس</td>
+                        <td>0.1 EOS</td>
+                        <td>0.2 EOS</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <br>
+            </div>
+
+        </div>
+        <hr>
+        <br>
+        <h6>کارمزد برداشت ریالی</h6>
+        <br>
+        <p>برداشت‌های ریالی برای تمامی حساب‌ها، در قالب انتقال پایا و یک بار در روز خواهد بود. بدیهی است مدت زمان انجام
+            تسویه ریالی، بسته به زمان درخواست برداشت، در روزهای غیر تعطیل می‌تواند حداکثر تا ۲۴ ساعت به طول انجامد.</p>
+        <br>
+
+
+    </div>
+    {% endblock %}

@@ -1,0 +1,538 @@
+{% extends 'auth-base.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row flex-nowrap">
+        {% include 'right-navbar.html' %}
+        <div class="col-10 col-sm-10 col-md-10 col-lg-8 col-xl-8 bg-light text-end min-vh-100 my-1">
+            <h3>داشبورد</h3>
+            <hr>
+            <!-- Carousel Section -->
+            <section>
+                <h5>دید کلی به بازارها</h5>
+                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel"
+                     style="margin-bottom: 0%; margin-top: 5%; border-radius: 10px;">
+                    <div style="height: 20px;"></div>
+                    <div class="carousel-inner" style="height: 300px;">
+                        <div class="carousel-item active">
+                            <img src="{% static '/logo/btc.svg' %}" class="d-block">
+                            <div class="carousel-caption text-dark">
+                                <h5 style="color: black;">بیت کوین</h5>
+                                <p>بهترین خرید: <span class="text-success">۱۶۷۶۷۳۳۴۱۸ تومان</span></p>
+                                <p>بهترین فروش: <span class="text-danger">۱۶۸۸۴۹۹۹۰۰ تومان</span></p>
+                                <a class="btn  btn-warning" href="#" role="button">معامله</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static '/logo/eth.svg' %}" class="d-block">
+                            <div class="carousel-caption text-dark">
+                                <h5 style="color: black;">اتریوم</h5>
+                                <p>بهترین خرید: <span class="text-success">۱۱۰۴۰۰۰۰۰ تومان</span></p>
+                                <p>بهترین فروش: <span class="text-danger">۱۱۰۶۴۹۰۰۰ تومان</span></p>
+                                <a class="btn  btn-warning" href="#" role="button">معامله</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static '/logo/ada.svg' %}" class="d-block">
+                            <div class="carousel-caption text-dark">
+                                <h5 style="color: black;">کاردانو</h5>
+                                <p>بهترین خرید: <span class="text-success">۵۹۵۵۱ تومان</span></p>
+                                <p>بهترین فروش: <span class="text-danger">۵۹۸۹۹ تومان</span></p>
+                                <a class="btn  btn-warning" href="#" role="button">معامله</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static '/logo/bnb.svg' %}" class="d-block">
+                            <div class="carousel-caption text-dark">
+                                <h5 style="color: black;">بایننس کوین</h5>
+                                <p>بهترین خرید: <span class="text-success">۱۳۲۱۱۰۰۰ تومان</span></p>
+                                <p>بهترین فروش: <span class="text-danger">۱۳۲۶۱۲۷۶ تومان</span></p>
+                                <a class="btn  btn-warning" href="#" role="button">معامله</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static '/logo/doge.svg' %}" class="d-block">
+                            <div class="carousel-caption text-dark">
+                                <h5 style="color: black;">دوج کوین</h5>
+                                <p>بهترین خرید: <span class="text-success">۶۸۵۴ تومان</span></p>
+                                <p>بهترین فروش: <span class="text-danger">۶۸۵۹ تومان</span></p>
+                                <a class="btn  btn-warning" href="#" role="button">معامله</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static '/logo/usdt.svg' %}" class="d-block">
+                            <div class="carousel-caption text-dark">
+                                <h5 style="color: black;">تتر</h5>
+                                <p>بهترین خرید: <span class="text-success">۲۷۵۲۵ تومان</span></p>
+                                <p>بهترین فروش: <span class="text-danger">۲۷۵۶۸ تومان</span></p>
+                                <a class="btn  btn-warning" href="#" role="button">معامله</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static '/logo/atom.svg' %}" class="d-block">
+                            <div class="carousel-caption text-dark">
+                                <h5 style="color: black;">اتم</h5>
+                                <p>بهترین خرید: <span class="text-success">۹۸۳۹۰۴ تومان</span></p>
+                                <p>بهترین فروش: <span class="text-danger">۹۸۸۰۰۰ تومان</span></p>
+                                <a class="btn  btn-warning" href="#" role="button">معامله</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static '/logo/xrp.svg' %}" class="d-block">
+                            <div class="carousel-caption text-dark">
+                                <h5 style="color: black;">ریپل</h5>
+                                <p>بهترین خرید: <span class="text-success">۳۰۰۴۰ تومان</span></p>
+                                <p>بهترین فروش: <span class="text-danger">۳۰۱۵۰ تومان</span></p>
+                                <a class="btn  btn-warning" href="#" role="button">معامله</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static '/logo/ltc.svg' %}" class="d-block">
+                            <div class="carousel-caption text-dark">
+                                <h5 style="color: black;">لایت کوین</h5>
+                                <p>بهترین خرید: <span class="text-success">۵۲۸۲۲۰۰ تومان</span></p>
+                                <p>بهترین فروش: <span class="text-danger">۵۳۴۹۹۰۰ تومان</span></p>
+                                <a class="btn  btn-warning" href="#" role="button">معامله</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static '/logo/trx.svg' %}" class="d-block">
+                            <div class="carousel-caption text-dark">
+                                <h5 style="color: black;">ترون</h5>
+                                <p>بهترین خرید: <span class="text-success">۲۷۵۹ تومان</span></p>
+                                <p>بهترین فروش: <span class="text-danger">۲۷۷۰ تومان</span></p>
+                                <a class="btn  btn-warning" href="#" role="button">معامله</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static '/logo/dash.svg' %}" class="d-block" alt="logo/btc.svg">
+                            <div class="carousel-caption text-dark">
+                                <h5 style="color: black;">دش</h5>
+                                <p>بهترین خرید: <span class="text-success">۵۳۸۶۷۴۷ تومان</span></p>
+                                <p>بهترین فروش: <span class="text-danger">۵۴۳۶۹۹۹ تومان</span></p>
+                                <a class="btn  btn-warning" href="#" role="button">معامله</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static '/logo/bch.svg' %}" class="d-block" alt="logo/btc.svg">
+                            <div class="carousel-caption text-dark">
+                                <h5 style="color: black;">بیت کوین کش</h5>
+                                <p>بهترین خرید: <span class="text-success">۱۷۳۵۴۲۵۲ تومان</span></p>
+                                <p>بهترین فروش: <span class="text-danger">۱۷۵۲۰۸۴۲ تومان</span></p>
+                                <a class="btn  btn-warning" href="#" role="button">معامله</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static '/logo/xlm.svg' %}" class="d-block" alt="logo/btc.svg">
+                            <div class="carousel-caption text-dark">
+                                <h5 style="color: black;">استلار</h5>
+                                <p>بهترین خرید: <span class="text-success">۱۰۳۰۲ تومان</span></p>
+                                <p>بهترین فروش: <span class="text-danger">۱۰۳۰۷ تومان</span></p>
+                                <a class="btn  btn-warning" href="#" role="button">معامله</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static '/logo/eos.svg' %}" class="d-block" alt="logo/btc.svg">
+                            <div class="carousel-caption text-dark">
+                                <h5 style="color: black;">ایاس</h5>
+                                <p>بهترین خرید: <span class="text-success">۱۲۸۵۰۱ تومان</span></p>
+                                <p>بهترین فروش: <span class="text-danger">۱۲۹۵۱۶ تومان</span></p>
+                                <a class="btn  btn-warning" href="#" role="button">معامله</a>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </section>
+
+            <section class="bg-white rounded p-2">
+                <h5>سطح کاربری </h5>
+                <hr>
+                <div class="card-group">
+                    <div class="card text-center border-success border-2">
+                        <img class="my-2" src="{% static '/logo/bronze.png' %}" width="75px;" height="75px;">
+                        <div class="card-body">
+                            <h5 class="card-title">سطح برنزی</h5>
+                            <p class="card-text">۰ تومان</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-success">۰.۴٪</small>
+                        </div>
+                    </div>
+                    <div class="card text-center">
+                        <img class="my-2" src="{% static '/logo/silver.png' %}" width="75px;" height="75px;">
+                        <div class="card-body">
+                            <h5 class="card-title">سطح نقره ای</h5>
+                            <p class="card-text">۲۰۰۰۰۰۰۰ تومان</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-success">۰.۳۵٪</small>
+                        </div>
+                    </div>
+                    <div class="card text-center">
+                        <img class="my-2" src="{% static '/logo/gold.png' %}" width="75px;" height="75px;">
+                        <div class="card-body">
+                            <h5 class="card-title">سطح طلایی</h5>
+                            <p class="card-text">۵۰۰۰۰۰۰۰ تومان</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-success">۰.۳٪</small>
+                        </div>
+                    </div>
+                    <div class="card text-center">
+                        <img class="my-2" src="{% static '/logo/platinum.png' %}" width="75px;" height="75px;">
+                        <div class="card-body">
+                            <h5 class="card-title">سطح پلاتینیوم</h5>
+                            <p class="card-text">۱۰۰۰۰۰۰۰۰ تومان</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-success">۰.۲۵%</small>
+                        </div>
+                    </div>
+                    <div class="card text-center">
+                        <img class="my-2" src="{% static '/logo/uranium.png' %}" width="75px;" height="75px;">
+                        <div class="card-body">
+                            <h5 class="card-title">سطح اورانیوم</h5>
+                            <p class="card-text">۲۰۰۰۰۰۰۰۰ تومان</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-success">۰.۲%</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="row p-2 m-2">
+                    <div class="col-sm-12 col-md-4 border-start">
+                        <h6>حجم معاملات سه ماه اخیر:</h6>
+                        <p>۰ تومان</p>
+                    </div>
+                    <div class="col-sm-12 col-md-4 border-start">
+                        <h6>حجم معامله مورد نیاز سطح بعدی:</h6>
+                        <p>۲۰۰۰۰۰۰۰ تومان</p>
+                    </div>
+                    <div class="col-sm-12 col-md-2 border-start">
+                        <h6>سطح فعلی:</h6>
+                        <p>برنزی</p>
+                    </div>
+                    <div class="col-sm-12 col-md-2">
+                        <h6>کارمزد فعلی:</h6>
+                        <p>۰.۴٪</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-white rounded p-2 my-3">
+                <h5>سفارشات فعال </h5>
+                <hr>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead class="table-light">
+                        <tr>
+                            <th scope="col">نوع سفارش</th>
+                            <th scope="col">بازار</th>
+                            <th scope="col">مقدار</th>
+                            <th scope="col">قیمت واحد</th>
+                            <th scope="col">قیمت کل</th>
+                            <th scope="col">پر شده</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>نوع سفارش</td>
+                            <td>بازار</td>
+                            <td>مقدار</td>
+                            <td>قیمت واحد</td>
+                            <td>قیمت کل</td>
+                            <td>پر شده</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </section>
+
+            <section class="p-2 my-3 bg-white rounded">
+                <h5>کیف رمزارزها</h5>
+                <hr>
+                <div class="row text-end">
+                    <div class="col-12 col-sm-6">
+                        <div class="row">
+                            <div class="col-1">
+                                <img src="{% static '/logo/btc.svg' %}" width="25px;">
+                            </div>
+                            <div class="col-6">
+                                بیت کوین
+                            </div>
+                            <div class="col-5 text-start">
+                                0 BTC
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="row">
+                            <div class="row">
+                                <div class="col-1">
+                                    <img src="{% static '/logo/eth.svg' %}" width="25px;">
+                                </div>
+                                <div class="col-6">
+                                    اتریوم
+                                </div>
+                                <div class="col-5 text-start">
+                                    0 ETH
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row text-end mt-2">
+                    <div class="col-12 col-sm-6">
+                        <div class="row">
+                            <div class="col-1">
+                                <img src="{% static '/logo/ada.svg' %}" width="25px;">
+                            </div>
+                            <div class="col-6">
+                                کاردانو
+                            </div>
+                            <div class="col-5 text-start">
+                                0 ADA
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="row">
+                            <div class="row">
+                                <div class="col-1">
+                                    <img src="{% static '/logo/bnb.svg' %}" width="25px;">
+                                </div>
+                                <div class="col-6">
+                                    بایننس کوین
+                                </div>
+                                <div class="col-5 text-start">
+                                    0 BNB
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row text-end mt-2">
+                    <div class="col-12 col-sm-6">
+                        <div class="row">
+                            <div class="col-1">
+                                <img src="{% static '/logo/doge.svg' %}" width="25px;">
+                            </div>
+                            <div class="col-6">
+                                دوج کوین
+                            </div>
+                            <div class="col-5 text-start">
+                                0 DOGE
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="row">
+                            <div class="row">
+                                <div class="col-1">
+                                    <img src="{% static '/logo/atom.svg' %}" width="25px;">
+                                </div>
+                                <div class="col-6">
+                                    اتم
+                                </div>
+                                <div class="col-5 text-start">
+                                    0 ATOM
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row text-end mt-2">
+                    <div class="col-12 col-sm-6">
+                        <div class="row">
+                            <div class="col-1">
+                                <img src="{% static '/logo/xrp.svg' %}" width="25px;">
+                            </div>
+                            <div class="col-6">
+                                ریپل
+                            </div>
+                            <div class="col-5 text-start">
+                                0 XRP
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="row">
+                            <div class="row">
+                                <div class="col-1">
+                                    <img src="{% static '/logo/ltc.svg' %}" width="25px;">
+                                </div>
+                                <div class="col-6">
+                                    لایت کوین
+                                </div>
+                                <div class="col-5 text-start">
+                                    0 LTC
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row text-end mt-2">
+                    <div class="col-12 col-sm-6">
+                        <div class="row">
+                            <div class="col-1">
+                                <img src="{% static '/logo/trx.svg' %}" width="25px;">
+                            </div>
+                            <div class="col-6">
+                                ترون
+                            </div>
+                            <div class="col-5 text-start">
+                                0 TRX
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="row">
+                            <div class="row">
+                                <div class="col-1">
+                                    <img src="{% static '/logo/dash.svg' %}" width="25px;">
+                                </div>
+                                <div class="col-6">
+                                    دش
+                                </div>
+                                <div class="col-5 text-start">
+                                    0 DASH
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row text-end mt-2">
+                    <div class="col-12 col-sm-6">
+                        <div class="row">
+                            <div class="col-1">
+                                <img src="{% static '/logo/bch.svg' %}" width="25px;">
+                            </div>
+                            <div class="col-6">
+                                بیت کوین کش
+                            </div>
+                            <div class="col-5 text-start">
+                                0 BCH
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="row">
+                            <div class="row">
+                                <div class="col-1">
+                                    <img src="{% static '/logo/xlm.svg' %}" width="25px;">
+                                </div>
+                                <div class="col-6">
+                                    استلار
+                                </div>
+                                <div class="col-5 text-start">
+                                    0 XLM
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row text-end mt-2">
+                    <div class="col-12 col-sm-6">
+                        <div class="row">
+                            <div class="col-1">
+                                <img src="{% static '/logo/eos.svg' %}" width="25px;">
+                            </div>
+                            <div class="col-6">
+                               ایاس
+                            </div>
+                            <div class="col-5 text-start">
+                                0 EOS
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="row">
+                            <div class="row">
+                                <div class="col-1">
+                                    <img src="{% static '/logo/usdt.svg' %}" width="25px;">
+                                </div>
+                                <div class="col-6">
+                                    تتر
+                                </div>
+                                <div class="col-5 text-start">
+                                    0 USDT
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row text-end mt-2">
+                    <div class="col-12 col-sm-6">
+                        <div class="row">
+                            <div class="row">
+                                <div class="col-1">
+                                    <img src="{% static '/logo/tmn.svg' %}" width="25px;">
+                                </div>
+                                <div class="col-6">
+                                    تومان
+                                </div>
+                                <div class="col-5 text-start">
+                                    ۰ تومان
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+             <section class="bg-white rounded p-2 my-3">
+                <h5>آخرین معاملات </h5>
+                <hr>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead class="table-light">
+                        <tr>
+                            <th scope="col">نوع</th>
+                            <th scope="col">بازار</th>
+                            <th scope="col">مقدار</th>
+                            <th scope="col">قیمت واحد</th>
+                            <th scope="col">تاریخ</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>نوع</td>
+                            <td>بازار</td>
+                            <td>مقدار</td>
+                            <td>قیمت واحد</td>
+                            <td>تاریخ</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </section>
+
+        </div>
+        {% include 'left-part.html' %}
+    </div>
+</div>
+
+{% endblock %}

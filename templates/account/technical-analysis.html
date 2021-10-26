@@ -1,0 +1,17 @@
+{% extends 'auth-base.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row flex-nowrap">
+        {% include 'right-navbar.html' %}
+        <div class="col-10 col-sm-10 col-md-10 col-lg-8 col-xl-8 bg-light text-end min-vh-100 my-1">
+            <h3>تحلیل تکنیکال</h3>
+            <hr>
+            <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+        </div>
+        {% include 'left-part.html' %}
+    </div>
+</div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+{% endblock %}
