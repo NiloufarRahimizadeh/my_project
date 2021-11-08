@@ -16,15 +16,18 @@ from django.contrib.sites.shortcuts import get_current_site
 from django.urls import reverse
 from .utils import Util
 from rest_framework.renderers import TemplateHTMLRenderer, JSONRenderer, StaticHTMLRenderer
+from django.shortcuts import get_object_or_404
 
 # Create your views here.
 
 
-class RegisterView(generics.GenericAPIView):
+class RegisterAPIView(generics.GenericAPIView):
     template_name = 'account/register.html'
     serializer_class = AccountSerializer
     renderer_classes = (JSONRenderer, TemplateHTMLRenderer)
     
+    def get(self, request):
+        return Response(template_name=self.template_name)
 
     def post(self, request):
         user = request.data
@@ -34,10 +37,14 @@ class RegisterView(generics.GenericAPIView):
         user_data = serializer.data
         return Response(user_data, status=status.HTTP_201_CREATED)
 
+
 class LoginAPIView(generics.GenericAPIView):
     serializer_class = LoginSerializer
     renderer_classes = (JSONRenderer, TemplateHTMLRenderer)
     template_name = 'account/login.html'
+    def get(self, request):
+        return Response(template_name=self.template_name)
+
     def post(self, request):
         serializer = self.serializer_class(data=request.data)
         serializer.is_valid(raise_exception=True)
@@ -49,11 +56,18 @@ class ChangePasswordView(generics.UpdateAPIView):
     queryset = Account.objects.all()
     permission_classes = (IsAuthenticated,)
     serializer_class = ChangePasswordSerializer
+    renderer_classes = (JSONRenderer, TemplateHTMLRenderer)
+    template_name = 'account/change-password.html'
+    def get(self, request):
+        return Response(template_name=self.template_name)
     
 
 class RequestPasswordResetEmail(generics.GenericAPIView):
     serializer_class = ResetPasswordEmailRequestSerializer
-
+    renderer_classes = (JSONRenderer, TemplateHTMLRenderer)
+    template_name = 'account/forget-password.html'
+    def get(self, request):
+        return Response(template_name=self.template_name)
 
     def post(self, request):
         serializer = self.serializer_class(data=request.data)
@@ -93,7 +107,10 @@ class PasswordTokenCheckAPI(generics.GenericAPIView):
 
 class SetNewPasswordAPIView(generics.GenericAPIView):
     serializer_class = SetNewPasswordSerializer
-    
+    renderer_classes = (JSONRenderer, TemplateHTMLRenderer)
+    template_name = 'account/reset-password.html'
+    def get(self, request):
+        return Response(template_name=self.template_name)
     def patch(self, request):
         serializer = self.serializer_class(data=request.data)
         serializer.is_valid(raise_exception=True)
@@ -107,6 +124,7 @@ def showthis(request,pk):
 
     return Response(serializer.data, status=HTTP_201_CREATED)
 
-
+def call_html(request):
+    return render(request, 'account/register.html')
 
 

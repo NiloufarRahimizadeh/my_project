@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 {% load static %}
-
+% load rest_framework %}
 <div class="container-fluid bg-gray">
     <div class="row flex-nowrap">
 
@@ -29,7 +29,7 @@
 
                         {% if not request.user.is_authenticated %}
 
-                        <form action="{% url 'login' %}" method="post">{% csrf_token %}
+                        <form action="{% url 'login' %}" method="POST">{% csrf_token %}
 
                             <div class="form-group my-2">
                                 <label>نام کاربری</label>
@@ -48,10 +48,10 @@
 
                         <div class="row d-flex justify-content-center mb-4">
                             <div class="col-4 text-end">
-                                <a href="#" style="text-decoration:underline; font-size: medium;">فراموشی رمز عبور</a>
+                                <a href="/account/request-reset-email/" style="text-decoration:underline; font-size: medium;">فراموشی رمز عبور</a>
                             </div>
                             <div class="col-4">
-                                <a href="account/register" style="text-decoration:underline; font-size: medium;">عضو جدید
+                                <a href="/account/api/register" style="text-decoration:underline; font-size: medium;">عضو جدید
                                     هستم</a>
                             </div>
 
